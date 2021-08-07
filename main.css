@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root { /* colours */
+--clr-primary-pale-blue: hsl(225, 100%, 94%);
+--clr-payment-btn: hsl(225, 100%, 98%);
+
+--clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+--clr-neutral-very-pale-blue: hsl(228, 100%, 98%);
+--clr-website-bg: hsl(225, 100%, 94%);
+--clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
+--clr-neutral-dark-blue: hsl(223, 47%, 23%);
+}
+:root { /* typography */
+    --font-ff-red-hat-display: 'Red Hat Display', sans-serif;
+}
+
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #E0E8FF url(/images/pattern-background-mobile.svg);
+    background: var(--clr-website-bg) url(/images/pattern-background-mobile.svg);
     background-repeat: repeat-x;
     height: 100vh;
 }
@@ -28,13 +45,12 @@ body {
 .card__header {
     margin-bottom: 18px;
 
-    font-family: Red Hat Display;
-    font-style: normal;
+    font-family: var(--font-ff-red-hat-display);
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
     letter-spacing: 0.06em;
-    color: hsla(223, 47%, 23%, 1);
+    color: var(--clr-neutral-dark-blue);
 
 }
 .order-summary {
@@ -43,33 +59,28 @@ body {
     max-width: 251px;
     margin-bottom: 25px;
 
-    font-family: Red Hat Display;
-    font-style: normal;
+    font-family: var(--font-ff-red-hat-display);
     font-weight: 500;
     font-size: 16px;
     line-height: 25px;
     letter-spacing: -0.02em;
-    color: hsla(224, 23%, 55%, 1);
+    color: var(--clr-neutral-desaturated-blue);
 
 }
-
 .plan {
     margin-left: 24px;
     margin-right: 24px;
-    
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 
     "music-icon plan change-btn "
     "music-icon price change-btn";
-    background: hsl(252, 100%, 98%);
+    background: var(--clr-neutral-very-pale-blue);
     border-radius: 15px;
     padding: 1rem 1rem;
     margin-bottom: 24px;
     max-width: 278px;
 }
-
-
 .music-icon {
     grid-area: music-icon;
     justify-self: center;
@@ -79,23 +90,20 @@ body {
     grid-area: plan;
     margin-left: 19px;
     text-align: left;
-    font-family: Red Hat Display;
-    font-style: normal;
+    font-family: var(--font-ff-red-hat-display);
     font-weight: 900;
     font-size: 14px;    
-    color: hsla(223, 47%, 23%, 1);
-
+    color: var(--clr-neutral-dark-blue);
 }
 .price {
     grid-area: price;
     margin-left: 19px;
     text-align: left;
-    font-family: Red Hat Display;
-    font-style: normal;
+    font-family: var(--font-ff-red-hat-display);
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: hsla(224, 23%, 55%, 1);
+    color: var(--clr-neutral-desaturated-blue);
 
 }
 .change-btn {
@@ -103,14 +111,12 @@ body {
     justify-self: center;
     align-self: center;
 
-    font-family: Red Hat Display;
-    font-style: normal;
+    font-family: var(--font-ff-red-hat-display);
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.04em;
 }
-
 .payment-btn,
 .cancel-btn {
     display: block;
@@ -118,39 +124,34 @@ body {
     margin-left: 24px;
     margin-right: 24px;
 }
-
 .payment-btn {
-    color: hsl(255, 100%, 98%, 1);
-    background: hsl(245, 75%, 52%, 1);
+    color: var(--clr-payment-btn);
+    background: var(--clr-primary-bright-blue);
     padding: 12px 0;
     margin-bottom: 21px;
     border-radius: 10px;
-    
-    font-family: Red Hat Display;
+    font-family: var(--font-ff-red-hat-display);
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
     line-height: 26px;
     letter-spacing: 0.02em;
-    
 }
 .cancel-btn {
     margin-bottom: 29px;
-
-    font-family: Red Hat Display;
+    font-family: var(--font-ff-red-hat-display);
     font-style: normal;
     font-weight: 900;
     font-size: 15px;
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.01em;
-    color: hsla(223, 47%, 23%, 1);
-
+    color: var(--clr-neutral-dark-blue);
 }
 
 @media only screen and (min-width:1440px){
  body {
-    background: #E0E8FF url(/images/pattern-background-desktop.svg);
+    background: var(--clr-website-bg) url(/images/pattern-background-desktop.svg);
     background-repeat: repeat-x;
  } 
  .card, .card__image {
